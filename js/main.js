@@ -16,33 +16,39 @@ L’output del prezzo finale va messo fuori in forma umana
 // Dichiaro le mie variabili GLOBALI
 let howKm, userEta, calcPrice, finalPrice;
 
-// Chiedo quanti km vuole percorrere l'utente
-howKm = document.getElementById("howKm").value;
+// Collego evento a bottone
+const bottone = document.getElementById("bottoneInvio");
+bottone.addEventListener("click", miaFunzione);
 
+// Evento collegato al click del bottone
+function miaFunzione() {
+    
+    // Chiedo quanti km vuole percorrere l'utente
+    howKm = document.getElementById("howKm").value;
 
-// Chiedo età dell'utente
-userEta = document.getElementById("userEta").value;
+    // Chiedo età dell'utente
+    userEta = document.getElementById("userEta").value;
 
-// Fisso prezzo al km
-const euroKm = 0.21;
+    // Fisso prezzo al km
+    const euroKm = 0.21;
 
-// Calcolo prezzo finale
-calcPrice = howKm * euroKm;
+    // Calcolo prezzo finale
+    calcPrice = howKm * euroKm;
 
-if (userEta < 18) { // sconto minorenni
-    finalPrice = calcPrice - (calcPrice * 0.20);
-    console.log("prezzo scontato 20% (poichè minorenne) =", finalPrice, "€");
+    if (userEta < 18) { // sconto minorenni
+        finalPrice = calcPrice - (calcPrice * 0.20);
+        console.log("prezzo scontato 20% (poichè minorenne) =", finalPrice, "€");
 
-} else if (userEta > 65) { // sconto over 65
-    finalPrice = calcPrice - (calcPrice * 0.40);
-    console.log("prezzo scontato 40% (poichè over 65) =", finalPrice, "€");
+    } else if (userEta > 65) { // sconto over 65
+        finalPrice = calcPrice - (calcPrice * 0.40);
+        console.log("prezzo scontato 40% (poichè over 65) =", finalPrice, "€");
 
-} else { // sconto (nullo) tra 18-65 anni
-    finalPrice = calcPrice;
-    console.log("prezzo senza sconto (poichè tra 18-65 anni) =", finalPrice, "€");
+    } else { // sconto (nullo) tra 18-65 anni
+        finalPrice = calcPrice;
+        console.log("prezzo senza sconto (poichè tra 18-65 anni) =", finalPrice, "€");
+    }
+
+    document.getElementById("mio_id").innerHTML = finalPrice.toFixed(2) + "€";
+
 }
 
-const element = document.getElementById("bottoneInvio");
-element.addEventListener("click", function() {
-    document.getElementById("mio_id").innerHTML = finalPrice.toFixed(2) + "€";
-});
