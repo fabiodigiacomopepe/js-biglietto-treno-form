@@ -1,0 +1,90 @@
+/* regole generali pagina */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #b91450;
+    font-weight: bold;
+}
+
+h1,
+h2 {
+    color: white;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.bloccoSuperiore,
+.bloccoInferiore {
+    width: 80%;
+    margin: 0 auto;
+    min-height: 200px;
+    background-color: white;
+    color: #b91450;
+    border-radius: 20px;
+}
+
+.bloccoInferiore {
+    border-radius: 0;
+    color: black;
+}
+
+.sezioneInput {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+form input {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.sezioneBottoni {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#bottoneInvio {
+    padding: 10px;
+}
+
+.sezioneOutput {
+    padding: 20px;
+}
+
+.titolo h4 {
+    border-bottom: 1px solid gray;
+}
+
+.biglietto {
+    display: flex;
+    min-height: 130px;
+    border-bottom: 1px solid gray;
+}
+
+.sezioneOutput .sinistra {
+    width: 30%;
+    background-color: #808080;
+}
+
+.sinistra,
+.destra {
+    padding: 20px;
+}
+
+.sezioneOutput .destra {
+    width: 70%;
+}
+
+#mio_id {
+    color: black;
+    text-align: left;
+}

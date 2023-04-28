@@ -4,19 +4,65 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
         <title>Esercizio 21</title>
     </head>
 
     <body>
         
-       <form action="#" method="get">
-            <input id="howKm" type="number" placeholder="Km da percorrere">
-            <input id="userEta" type="number" placeholder="Età">
-            <button id="bottoneInvio" type="button">Invia</button>
-       </form>
+        <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
 
-       <h2 id="mio_id"></h2>
+        <div class="bloccoSuperiore">
+            <div class="sezioneInput">
+                <div>
+                    Nome Cognome <br>
+                    <form action="#" method="get">
+                        <input id="nomePasseggero" type="text" placeholder="Inserisci nome">
+                    </form>
+                </div>
+                <div>
+                    Km da percorrere <br>
+                    <form action="#" method="get">
+                        <input id="howKm" type="number" placeholder="Km da percorrere">
+                    </form>
+                </div>
+                <div>
+                    Fascia d'età <br>
+                    <form action="#" method="get">
+                        <input id="userEta" type="number" placeholder="Età">
+                    </form>
+                </div>
+            </div>
 
+            <div class="sezioneBottoni">
+                <form action="#" method="get">
+                    <button id="bottoneInvio" type="button">Genera</button>
+               </form>
+            </div>
+        </div>
+
+        <h2>IL TUO BIGLIETTO</h2>
+
+        <div class="bloccoInferiore">
+            <div class="sezioneOutput">
+                <div class="titolo">
+                    <h4>DETTAGLIO PASSEGGERI</h4>
+                </div>
+
+                <div class="biglietto">
+                    <div class="sinistra">
+                        <h4>NOME PASSEGGERO</h4>
+                        <h4 id="mostroNomePasseggero"></h4>
+                    </div>
+
+                    <div class="destra">
+                        <h4>Costo biglietto</h4>
+                        <h2 id="mio_id"></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
         <script src="js/main.js"></script>
     </body>
 </html>

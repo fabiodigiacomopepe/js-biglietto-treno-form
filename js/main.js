@@ -14,7 +14,7 @@ L’output del prezzo finale va messo fuori in forma umana
 
 
 // Dichiaro le mie variabili GLOBALI
-let howKm, userEta, calcPrice, finalPrice;
+let userName, howKm, userEta, calcPrice, finalPrice;
 
 // Collego evento a bottone
 const bottone = document.getElementById("bottoneInvio");
@@ -22,6 +22,9 @@ bottone.addEventListener("click", miaFunzione);
 
 // Evento collegato al click del bottone
 function miaFunzione() {
+
+    // Chiedo nome passeggero
+    userName = document.getElementById("nomePasseggero").value;
     
     // Chiedo quanti km vuole percorrere l'utente
     howKm = document.getElementById("howKm").value;
@@ -48,7 +51,9 @@ function miaFunzione() {
         console.log("prezzo senza sconto (poichè tra 18-65 anni) =", finalPrice, "€");
     }
 
+    // Genero messaggio a schermo
     document.getElementById("mio_id").innerHTML = finalPrice.toFixed(2) + "€";
+    document.getElementById("mostroNomePasseggero").innerHTML = userName;
 
 }
 
