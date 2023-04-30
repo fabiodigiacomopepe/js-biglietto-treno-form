@@ -16,9 +16,9 @@ L’output del prezzo finale va messo fuori in forma umana
 // Dichiaro le mie variabili GLOBALI
 let userName, howKm, userEta, calcPrice, finalPrice;
 
-// Collego evento a bottone
-const bottone = document.getElementById("bottoneInvio");
-bottone.addEventListener("click", miaFunzione);
+// Collego evento a bottone INVIO
+const bottoneInvio = document.getElementById("bottoneInvio");
+bottoneInvio.addEventListener("click", miaFunzione);
 
 // Evento collegato al click del bottone
 function miaFunzione() {
@@ -71,3 +71,11 @@ function miaFunzione() {
 
 }
 
+// Collego evento a bottone RESETTA
+const bottoneResetta = document.getElementById("bottoneResetta");
+bottoneResetta.addEventListener("click", resettaTutto);
+
+// Evento collegato al click del bottone
+function resettaTutto() {
+    history.go(0);
+}

@@ -56,7 +56,8 @@ form input {
     margin-top: 20px;
 }
 
-#bottoneInvio {
+#bottoneInvio,
+#bottoneResetta {
     padding: 10px;
 }
 
