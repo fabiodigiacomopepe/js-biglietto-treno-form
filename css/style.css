@@ -52,6 +52,10 @@ form input {
     margin-top: 20px;
 }
 
+#userEta {
+    margin-top: 20px;
+}
+
 #bottoneInvio {
     padding: 10px;
 }
@@ -84,7 +88,34 @@ form input {
     width: 70%;
 }
 
-#mio_id {
+.infoBiglietto {
+    display: flex;
+    gap: 130px;
+}
+
+.prezzi {
+    display: flex;
+    align-items: center;
+}
+
+#prezzo,
+#prezzoBarrato,
+#tipologiaBiglietto {
     color: black;
     text-align: left;
+    margin-right: 15px;
+    font-size: 18px;
+}
+
+#prezzoBarrato {
+    text-decoration: line-through;
+    font-size: 12px;
+}
+
+.add {
+    display: block;
+}
+
+.remove {
+    display: none;
 }

@@ -29,7 +29,11 @@
                 <div>
                     Fascia d'età <br>
                     <form action="#" method="get">
-                        <input id="userEta" type="number" placeholder="Età">
+                            <select name="Fascia età" id="userEta">
+                            <option value="maggiorenne">Maggiorenne (tra 18-65)</option>
+                            <option value="minorenne">Minorenne (0-17)</option>
+                            <option value="old">Old (over 65)</option>
+                        </select>
                     </form>
                 </div>
             </div>
@@ -56,8 +60,19 @@
                     </div>
 
                     <div class="destra">
-                        <h4>Costo biglietto</h4>
-                        <h2 id="mio_id"></h2>
+                        <div class="infoBiglietto">
+                            <div>
+                                <h3>Offerta</h3>
+                                <h4 id="tipologiaBiglietto"></h4>
+                            </div>
+                            
+                            <div>
+                                <h3>Costo biglietto</h3>
+                                <div class="prezzi">
+                                    <h4 id="prezzo"></h4><h4 id="prezzoBarrato"></h4>
+                                </div>
+                            </div>
+                        </div>   
                     </div>
                 </div>
             </div>
